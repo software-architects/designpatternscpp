@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.hpp" />
+    <ClInclude Include="Composite.hpp" />
     <ClInclude Include="Rectangle.hpp" />
     <ClInclude Include="Shape.hpp" />
     <ClInclude Include="stdafx.h" />
@@ -93,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Composite.cpp" />
     <ClCompile Include="DesignPatternsApplication.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="stdafx.cpp">
