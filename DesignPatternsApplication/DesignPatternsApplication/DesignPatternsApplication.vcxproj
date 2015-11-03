@@ -88,8 +88,11 @@
     <ClInclude Include="Circle.hpp" />
     <ClInclude Include="CommandLineBuilder.hpp" />
     <ClInclude Include="Composite.hpp" />
+    <ClInclude Include="DebugShapeFactory.hpp" />
     <ClInclude Include="Rectangle.hpp" />
     <ClInclude Include="Shape.hpp" />
+    <ClInclude Include="AbstractShapeFactory.hpp" />
+    <ClInclude Include="StandardShapeFactory.hpp" />
     <ClInclude Include="StaticSceneBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -99,8 +102,10 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CommandLineBuilder.cpp" />
     <ClCompile Include="Composite.cpp" />
+    <ClCompile Include="DebugShapeFactory.cpp" />
     <ClCompile Include="DesignPatternsApplication.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="StandardShapeFactory.cpp" />
     <ClCompile Include="StaticSceneBuilder.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

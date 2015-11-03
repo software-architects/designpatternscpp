@@ -5,5 +5,5 @@
 class StaticSceneBuilder : public AbstractBuilder
 {
 public:
-	virtual ShapePtr construct() override;
+	virtual ShapePtr construct(AbstractShapeFactory& factory) override;
 };

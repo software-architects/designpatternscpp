@@ -16,6 +16,9 @@
 #include "StaticSceneBuilder.hpp"
 #include "CommandLineBuilder.hpp"
 
+#include "StandardShapeFactory.hpp"
+#include "DebugShapeFactory.hpp"
+
 using namespace ci;
 using namespace ci::app;
 
@@ -29,6 +32,9 @@ public:
 
 	using BuilderPtr = std::shared_ptr<AbstractBuilder>;
 	BuilderPtr builder = std::make_shared<StaticSceneBuilder>();
+
+	using ShapeFactoryPtr = std::shared_ptr<AbstractShapeFactory>;
+	ShapeFactoryPtr factory = std::make_shared<StandardShapeFactory>();
 };
 
 void DesignPatternsApp::setup()
@@ -41,11 +47,15 @@ void DesignPatternsApp::setup()
 		if (s == "--commandLineBuilder") {
 			builder = std::make_shared<CommandLineBuilder>();
 		}
+
+		if (s == "--debugFactory") {
+			factory = std::make_shared<DebugShapeFactory>();
+		}
 	}
 
-	// construct the scene using the builder 
+	// construct the scene using the builder with the factory
 	// (builder actual type depends on command line parameter)
-	auto scene = builder->construct();
+	auto scene = builder->construct(*factory);
 
 	float area = scene->calculateArea();
 	std::cout << "area is : " << area << std::endl;
