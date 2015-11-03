@@ -1,6 +1,7 @@
 #pragma once
 #include "Shape.hpp"
 #include "vec2.h"
+#include "AbstractShapeVisitor.hpp"
 
 class Rectangle : public Shape
 {
@@ -15,4 +16,6 @@ public:
 	virtual ~Rectangle();
 	virtual float calculateArea() const  override;
 	virtual void draw() const  override;
+
+	virtual void accept(AbstractShapeVisitor& visitor) override;
 };

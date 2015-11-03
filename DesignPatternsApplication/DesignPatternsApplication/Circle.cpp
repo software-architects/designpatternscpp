@@ -17,3 +17,8 @@ void Circle::draw() const
 	ci::gl::drawSolidCircle({ this->position.x, this->position.y }, 
 				this->radius, 360);
 }
+
+void Circle::accept(AbstractShapeVisitor& visitor)
+{
+	visitor.visitCircle(*this);
+}

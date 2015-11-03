@@ -20,5 +20,12 @@ void Composite::add(ShapePtr shape)
 	this->shapes.push_back(shape);
 }
 
+void Composite::accept(AbstractShapeVisitor& visitor)
+{
+	visitor.visitComposite(*this);
+}
 
-
+std::vector<Composite::ShapePtr>& Composite::getShapes()
+{
+	return shapes;
+}

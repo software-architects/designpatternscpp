@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AbstractShapeVisitor.hpp"
+
 class Shape
 {
 public:
@@ -8,5 +10,7 @@ public:
 
 	virtual float calculateArea() const = 0;
 	virtual void draw() const = 0;
+
+	virtual void accept(AbstractShapeVisitor& visitor) = 0;
 };
 

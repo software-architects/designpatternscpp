@@ -17,3 +17,8 @@ void Rectangle::draw() const
 				this->position.x + this->size.x, this->position.y + this->size.y });
 }
 
+void Rectangle::accept(AbstractShapeVisitor& visitor)
+{
+	visitor.visitRectangle(*this);
+}
+

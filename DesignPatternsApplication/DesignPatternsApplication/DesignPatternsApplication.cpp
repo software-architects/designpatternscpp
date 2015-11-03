@@ -19,6 +19,8 @@
 #include "StandardShapeFactory.hpp"
 #include "DebugShapeFactory.hpp"
 
+#include "ShapeCountingVisitor.hpp"
+
 using namespace ci;
 using namespace ci::app;
 
@@ -59,6 +61,14 @@ void DesignPatternsApp::setup()
 
 	float area = scene->calculateArea();
 	std::cout << "area is : " << area << std::endl;
+
+	ShapeCountingVisitor visitor;
+	scene->accept(visitor);
+
+	std::cout << "there are " << std::endl;
+	std::cout << visitor.circleCount << " circles," << std::endl;
+	std::cout << visitor.rectangleCount << " rectangles and" << std::endl;
+	std::cout << visitor.compositeCount << " composites in the scene" << std::endl;
 
 	gl::enableDepthRead();
 	gl::enableDepthWrite();

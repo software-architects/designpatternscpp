@@ -92,6 +92,8 @@
     <ClInclude Include="Rectangle.hpp" />
     <ClInclude Include="Shape.hpp" />
     <ClInclude Include="AbstractShapeFactory.hpp" />
+    <ClInclude Include="AbstractShapeVisitor.hpp" />
+    <ClInclude Include="ShapeCountingVisitor.hpp" />
     <ClInclude Include="StandardShapeFactory.hpp" />
     <ClInclude Include="StaticSceneBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
